@@ -1,0 +1,29 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal {
+  position: relative;
+  width: 400px;
+  max-width: 90%;
+  padding: 50px;
+  border-radius: 2px;
+  background-color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+.closebtn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+}
