@@ -4,6 +4,7 @@ import SearchData from './components/Datafetch-debounce/SearchData'
 import Form from './components/Form-validation/Form'
 import MainModal from './components/Focusable-Modal/MainModal'
 import Clock from './components/Digital-clock/Clock'
+import Stopwatch from './components/Stop-watch/Stopwatch'
 function App() {
 
   return (
@@ -12,6 +13,7 @@ function App() {
       <Form/>
       <MainModal/>
       <Clock/>
+      <Stopwatch/>
     </>
    
   )
