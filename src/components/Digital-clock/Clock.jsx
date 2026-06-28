@@ -1,17 +1,18 @@
 import { useState, useEffect } from "react";
-export default function Clock() {
+export default function App() {
   const [time, setTime] = useState(new Date());
 
   const getCorrectTime = () => {
-    const hours = time.getHours();
-    const minutes = time.getMinutes();
-    const seconds = time.getSeconds();
-    const AMPM = hours >= 12 ? "PM" : "AM";
-    return `${time.getHours()} : ${time.getMinutes()} : ${time.getSeconds()} ${AMPM}`;
+    const formattedHours = time.getHours() % 12;
+    const hours = formattedHours.toString().padStart(2, "0");
+    const minutes = time.getMinutes().toString().padStart(2, "0");
+    const seconds = time.getSeconds().toString().padStart(2, "0");
+    const AMPM = time.getHours() >= 12 ? "PM" : "AM";
+    return `${hours} : ${minutes} : ${seconds} ${AMPM}`;
   };
   useEffect(() => {
-    let timeout = setInterval(() => setTime(new Date()), 1000);
-    return () => clearInterval(timeout);
+    let timeInterval = setInterval(() => setTime(new Date()), 1000);
+    return () => clearInterval(timeInterval);
   }, []);
   return (
     <div className="App">
