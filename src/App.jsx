@@ -6,6 +6,7 @@ import MainModal from './components/Focusable-Modal/MainModal'
 import Clock from './components/Digital-clock/Clock'
 import Stopwatch from './components/Stop-watch/Stopwatch'
 import Star from './components/Star-rating/Star'
+import Pagination from './components/Pagination/Pagination'
 function App() {
 
   return (
@@ -16,6 +17,7 @@ function App() {
       <Clock/>
       <Stopwatch/>
       <Star maxStars={5} />
+      <Pagination/>
     </>
    
   )
