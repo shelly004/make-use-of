@@ -2,7 +2,7 @@ Array.prototype.myFilter = function(callback){
   let result = [];
   for(let i=0;i<this.length;i++){
     if(Object.hasOwnProperty.call(this, i) && callback(this[i]))
-      result.push(this[i]); 
+      result.push(this[i], i, this); 
   }
   return result;
 }
